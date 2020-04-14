@@ -2,7 +2,7 @@
 
 ## Notebook Workflow
 1. Feature-Extraction - This notebook extracts features from data generated with Google Earth Engine to use in modeling flood extent for Malawi.
-2. Flood-Modeling - Trained regression model on data from 2015 flood and tested on 2019 flood. Tried several different algorithms and Random Forest produced the best results. 
+2. Flood-Modeling - Trained regression model on data from 2015 flood and tested on 2019 flood. Tried several different algorithms and Catboost produced the best results. 
 3. Visualization done in a variety of programs, mainly QGIS and Tableau.
 
 ## Overview
@@ -21,13 +21,12 @@ For the target variable I started with a polygon of the area that was flooded fo
 #### Features:
 Several of the features were extracted for the study area using Google Earth Engine code editor which allows processing on google cloud. 
 
-- Soil organic carbon (proxy for soil health and ecosystem condition)
-- % clay content of soil at 10cm
-- % clay content of soil at 200cm
-- Distance to wetlands
-- Landcover classes
-- Elevation
-- Topographic position index
+- [Soil organic carbon](http://www.masdap.mw/layers/geonode:malawi_national_soil_organic_carbon0#more) (proxy for soil health and ecosystem condition)
+- [% clay content of soil at 10cm](https://developers.google.com/earth-engine/datasets/catalog/OpenLandMap_SOL_SOL_CLAY-WFRACTION_USDA-3A1A1A_M_v02)
+- Distance to [wetlands](http://www.masdap.mw/maps/523)
+- [Landcover classes](https://developers.google.com/earth-engine/datasets/catalog/MODIS_006_MCD12Q1)
+- [Elevation]( https://developers.google.com/earth-engine/datasets/catalog/USGS_SRTMGL1_003)
+- [Topographic position index](https://developers.google.com/earth-engine/datasets/catalog/CSP_ERGo_1_0_Global_SRTM_mTPI)
 - Total weekly precipitation 2 months before event
 
 ## Results
